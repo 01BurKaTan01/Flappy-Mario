@@ -23,24 +23,6 @@ Flappy Mario is a web-based game inspired by the classic Flappy Bird, with a Mar
 - CSS
 - JavaScript
 
-## Project Structure
-
-/flappy-mario
-├── /static
-│ ├── /sounds
-│ │ ├── over.mp3
-│ │ ├── score.mp3
-│ │ └── tap.mp3
-│ ├── bg.png
-│ ├── favicon.png
-│ ├── jump.png
-│ ├── pipe.png
-│ ├── pipe2.png
-│ ├── script.js
-│ └── style.css
-├── index.html
-└── README.md
-
 
 ## Setup and Launch
 
@@ -49,6 +31,7 @@ To run the game locally:
 1. Clone this repository to your local machine.
 2. Navigate to the project directory.
 3. Open `index.html` in your web browser.
+4. Open your web browser and go to `http://localhost:8080/` to play the game.
 
 ## License
 
