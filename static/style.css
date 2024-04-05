@@ -1,0 +1,101 @@
+body {
+    background-color: #282c34;
+    color: #FFF;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#gameTitle {
+    margin-top: 20px;
+    font-size: 48px;
+    color: #E63946;
+    text-shadow: 2px 2px 4px #000;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+#gameArea {
+    width: 1200px;
+    height: 600px;
+    border: 2px solid #000;
+    margin: 0 auto;
+    background-image: url('/static/bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#character {
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    transform: translateY(-50%);
+    width: 45px;
+    height: auto;
+    user-select: none;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 64px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    z-index: 1000;
+    user-select: none;
+}
+
+#movingLines {
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 10.5%;
+    background: repeating-linear-gradient(
+        45deg,
+        rgb(140, 255, 117) 0%,
+        rgb(140, 255, 117) 12.5%,
+        rgb(7, 151, 75) 12.5%,
+        rgb(7, 151, 75) 25%,
+        rgb(0, 0, 0) 25%,
+        rgb(0, 0, 0) 37.5%,
+        rgb(255, 255, 255) 37.5%,
+        rgb(255, 255, 255) 50%,
+        rgb(140, 255, 117) 50%
+    );
+    background-size: 40px 40px;
+    animation: none;
+}
+
+@keyframes moveLines {
+    0% { background-position: 100% 0; }
+    100% { background-position: 0% 0; }
+}
+
+#gameOverScreen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+}
+
+#restartButton {
+    font-size: 20px;
+    padding: 10px;
+}

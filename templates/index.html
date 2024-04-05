@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Mario</title>
+    <link rel="icon" href="/static/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <audio id="gameOverSound" src="/static/sounds/over.mp3" preload="auto"></audio>
+    <audio id="scoreSound" src="/static/sounds/score.mp3" preload="auto"></audio>
+    <audio id="tapSound" src="/static/sounds/tap.mp3" preload="auto"></audio>
+    <div id="gameArea" onclick="gameControl()">
+        <img id="character" src="/static/jump.png" alt="Character">
+        <div id="score">0</div>
+        <div id="movingLines"></div>
+    </div>
+    <div id="gameOverScreen">
+        <p id="gameOverMessage">You couldn't reach princess.<br>Here is your score: <span id="finalScore"></span></p>
+        <button id="restartButton">Restart</button>
+    </div>
+    <div id="gameTitle">Flappy Mario</div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
